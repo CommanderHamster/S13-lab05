@@ -78,7 +78,7 @@ public class AllMyDrawings
 	d3 = ShapeTransforms.translatedCopyOf(d3, 0, 300);
 	g2.draw(d3);
 
-	Shape d4 = ShapeTransforms.translatedCopyOf(d1_windowless, 300, 300);
+	Shape d4 = ShapeTransforms.translatedCopyOf(d1, 300, 300);
 	d4 = ShapeTransforms.rotatedCopyOf(d4, -Math.PI/3.0);
 	g2.draw(d4);
 	

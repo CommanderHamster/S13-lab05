@@ -5,31 +5,20 @@ import javax.swing.JPanel;
 import javax.swing.JComponent;
 
 // the four tools things we'll use to draw
-
 import java.awt.geom.Line2D;  // single lines
 import java.awt.geom.Ellipse2D;  // ellipses and circles
 import java.awt.Rectangle;  // squares and rectangles
 import java.awt.geom.GeneralPath; // combinations of lines and curves
 
-
 /**
    A component that draws a Picture by Phill Conrad
-   
    @author Phill Conrad (original drawing)
    @author Shanen Cross (fixed the snowmans's head)
    @version for UCSB CS56, S13
-
-   
 */
-
-// Your class should "extend JComponent
-// This is "inheritance", which we'll start readina about in Chapter 10
-// It means that PictureComponent "is a" JComponent
-//   that is, a special type of JComponent that is for a specific purpose
 
 public class PictureComponent extends JComponent
 {  
-
     /** The paintComponent method is always required if you want
      * any graphics to appear in your JComponent.    
      * 
@@ -55,7 +44,7 @@ public class PictureComponent extends JComponent
       // @@@ YOU'LL CUSTOMIZE EVERYTHING BELOW THIS LINE
       
       Rectangle house = new Rectangle(100, 200, 100, 100);
-      g2.draw( house);
+      g2.draw(house);
 
        // lroof and rroof are the left and right sides of the roof,
        Line2D.Double lroof = new Line2D.Double(100, 200, 150, 150);
