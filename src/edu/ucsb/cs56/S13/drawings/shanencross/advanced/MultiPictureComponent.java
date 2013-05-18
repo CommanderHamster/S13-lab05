@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.S13.drawings.pconrad.advanced;
+package edu.ucsb.cs56.S13.drawings.shanencross.advanced;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -24,7 +24,8 @@ import java.awt.BasicStroke; // class that implements stroke
    A component that draws a Picture by Phill Conrad
    
    @author Phill Conrad (original drawing)
-   @version CS56, Spring 2012, UCSB
+   @author Shanen Cross (made modifications)
+   @version CS56, Spring 2013, UCSB
 
    
 */
