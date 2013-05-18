@@ -41,8 +41,6 @@ public class PictureComponent extends JComponent
       Graphics2D g2 = (Graphics2D) g;
 
       // Now the fun part---we draw stuff!
-      // @@@ YOU'LL CUSTOMIZE EVERYTHING BELOW THIS LINE
-      
       Rectangle house = new Rectangle(100, 200, 100, 100);
       g2.draw(house);
 
