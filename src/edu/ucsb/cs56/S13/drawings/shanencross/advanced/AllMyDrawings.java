@@ -54,12 +54,33 @@ public class AllMyDrawings
 	d3 = ShapeTransforms.translatedCopyOf(d3, 0, -300);
 	g2.draw(d3);
 
+	Shape d4 = ShapeTransforms.translatedCopyOf(d1, 0, 300);
+	d4  = ShapeTransforms.rotatedCopyOf(d4, Math.PI/4.0);
+	g2.draw(d4);
     }
        
 
     /** Draw a different picture with a few houses and coffee cups
      */
     public static void drawPicture3(Graphics2D g2) {
+
+	DoorWithWindow d1 = new DoorWithWindow(100, 100, 100, 250);
+	g2.draw(d1);
+	
+	Door d2 = new Door(250, 100, 100, 250);
+	g2.draw(d2);
+
+	Door d1_windowless = new Door(100, 100, 100, 250); // not to be drawn
+
+	Shape d3 = ShapeTransforms.rotatedCopyOf(d1_windowless, Math.PI/3.0);
+	d3 = ShapeTransforms.translatedCopyOf(d3, 0, 300);
+	g2.draw(d3);
+
+	Shape d4 = ShapeTransforms.translatedCopyOf(d1_windowless, 300, 300);
+	d4 = ShapeTransforms.rotatedCopyOf(d4, -Math.PI/3.0);
+	g2.draw(d4);
+	
+	g2.drawString("4 Doors: Two With Windows, Two Without by Shanen Cross", 20, 20);
 	/*
 	// label the drawing
 	

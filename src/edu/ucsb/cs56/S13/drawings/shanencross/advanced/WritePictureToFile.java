@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.S13.drawings.pconrad.advanced;
+package edu.ucsb.cs56.S13.drawings.shanencross.advanced;
 import java.awt.image.BufferedImage;
 import java.awt.Graphics2D;
 import java.awt.Color;
@@ -15,7 +15,8 @@ import edu.ucsb.cs56.S13.drawings.utilities.GeneralPathWrapper;
  *  A class with a main method that can write a drawing to a graphics file.
  *  
  *  @author P. Conrad, 
- *  @version for CS56, W11 UCSB
+ *  @author Shanen Cross (modified by)
+ *  @version for CS56, S13 UCSB
  */
 
 public class WritePictureToFile
@@ -23,7 +24,6 @@ public class WritePictureToFile
     public static void usage()
     {
        System.out.println("Usage: java WritePictureToFile whichImage mypic");
-       // @@@ modify the next line to describe your picture
        System.out.println(" whichImage should be 1,2 or 3");
        System.out.println(" whichImage chooses from drawPicture1, 2 or 3");
        System.out.println(" .png gets added to the filename");
@@ -32,10 +32,11 @@ public class WritePictureToFile
        System.out.println(" produces foo.png from drawPicture3");
     }
 
-    /** Write the drawFourCoffeeCups picture to a file.
-     * 
-     * @param args  The first command line argument is the file to write to.  We leave off the extension
-     *              because that gets put on automatically.
+    /** Write one of the three doors picture to a file, as specified via
+     *  command line argument
+     * @param args  The "zeroth" command line argument specifies which picture to print (1, 2, or 3),
+     * and the "first" command line argument is the file to write to.  We leave off the extension
+     * because that gets put on automatically.
      */
 
    public static void main(String[] args)

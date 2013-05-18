@@ -29,7 +29,7 @@ public class MultiPictureViewer
        // Set the size to whatever size you like (width, height)
        // For projects you turn in, lets not get any bigger than 640,480
        
-       frame.setSize(640,480);
+       frame.setSize(1024,768);
 
        // Set your own title
        frame.setTitle("Shanen's First Drawing");
