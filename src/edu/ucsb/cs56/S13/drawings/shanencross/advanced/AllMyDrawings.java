@@ -20,15 +20,14 @@ import edu.ucsb.cs56.S13.drawings.utilities.GeneralPathWrapper;
  * A class with static methods for drawing various pictures
  * 
  * @author Phill Conrad 
- * @version for CS10, lab06, Spring 2009
+ * @auhor Shanen Cross (replaced with new pictures)
+ * @version for CS56, lab05, S13
  */
-
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few houses 
+    /** Draw a picture with a few doors, scaled and translated around
      */
-
     public static void drawPicture1(Graphics2D g2) {
 
 	Door d1 = new Door(100, 100, 100, 250);
@@ -40,9 +39,11 @@ public class AllMyDrawings
 	Shape d3 = ShapeTransforms.scaledCopyOfLL(d1, 0.75, 0.75);
 	d3 = ShapeTransforms.translatedCopyOf(d3, 150, -50);
 	g2.draw(d3);
+	
+	g2.drawString("3 Doors, Scaled and Translated", 20, 20);
      }
 
-    /** Draw a picture with a few houses and coffee cups
+    /** Draw a picture with some doors, demonstrating rotation
      */
     public static void drawPicture2(Graphics2D g2) {
 	Door d1 = new Door(100, 100, 100, 250);
@@ -57,10 +58,11 @@ public class AllMyDrawings
 	Shape d4 = ShapeTransforms.translatedCopyOf(d1, 0, 300);
 	d4  = ShapeTransforms.rotatedCopyOf(d4, Math.PI/4.0);
 	g2.draw(d4);
+	g2.drawString("4 Doors: Now With Some Rotation,  by Shanen Cross", 20, 20);
     }
        
 
-    /** Draw a different picture with a few houses and coffee cups
+    /** Draw a different picture with some doors and doors with windows
      */
     public static void drawPicture3(Graphics2D g2) {
 
@@ -80,21 +82,7 @@ public class AllMyDrawings
 	d4 = ShapeTransforms.rotatedCopyOf(d4, -Math.PI/3.0);
 	g2.draw(d4);
 	
-	g2.drawString("4 Doors: Two With Windows, Two Without by Shanen Cross", 20, 20);
-	/*
-	// label the drawing
-	
-	g2.drawString("A bunch of Coffee Cups by Phill Conrad", 20,20);
-	
-	// Draw some coffee cups.
-	
-       CoffeeCup large = new CoffeeCup(100,50,225,150);
-       CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
-       
-       g2.setColor(Color.RED);     g2.draw(large);
-       g2.setColor(Color.GREEN);   g2.draw(smallCC);
-	*/
-       
+	g2.drawString("4 Doors: Two With Windows, Two Without by Shanen Cross", 20, 20);       
     }
     
 

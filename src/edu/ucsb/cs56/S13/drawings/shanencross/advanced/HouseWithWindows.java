@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.S13.drawings.pconrad.advanced;
+package edu.ucsb.cs56.S13.drawings.shanencross.advanced;
 import java.awt.geom.GeneralPath; // combinations of lines and curves
 import java.awt.geom.AffineTransform; // translation, rotation, scale
 import java.awt.Shape; // general class for shapes
@@ -17,7 +17,8 @@ import edu.ucsb.cs56.S13.drawings.utilities.GeneralPathWrapper;
    A House
       
    @author Phill Conrad 
-   @version for CS56, W11, UCSB, 02/23/2011
+   @authro Shanen Cross (only modified package name)
+   @version for CS56, S13, UCSB, lab05
    
 */
 public class HouseWithWindows extends House implements Shape

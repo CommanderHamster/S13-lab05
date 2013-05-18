@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.S13.drawings.pconrad.advanced;
+package edu.ucsb.cs56.S13.drawings.shanencross.advanced;
 import java.awt.geom.GeneralPath; // combinations of lines and curves
 import java.awt.geom.AffineTransform; // translation, rotation, scale
 import java.awt.Shape; // general class for shapes
@@ -20,7 +20,8 @@ import edu.ucsb.cs56.S13.drawings.utilities.GeneralPathWrapper;
    rotated, scaled, etc.
       
    @author Phill Conrad 
-   @version for CS56, Winter 11, UCSB
+   @author Shanen Cross (only modified package name)
+   @version for CS56, S13, UCSB, lab05
    
 */
 public class House extends GeneralPathWrapper implements Shape
