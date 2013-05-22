@@ -34,6 +34,13 @@ public class Bed extends GeneralPathWrapper implements Shape
 	drawingHelper(x, y, width, height, pillowWidth);
 
     }
+    /** drawingHelper - helps draw the bed, provided so it can be called more than once in a subclass as opposed to not being able to if the code was in the const ructor
+	@param x x coordinate of lower left post of bed
+	@param y y coordinate of lower left post of bed
+	@param width of the bed
+	@param height of a post of the bed
+	@param pillowWidth width of pillow on bed
+    */
     public void drawingHelper(double x, double y, double width, double height, double pillowWidth)
     {
 	// calculate positions for different parts of bed                                                                                                                                   
