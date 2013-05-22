@@ -31,27 +31,33 @@ public class Bed extends GeneralPathWrapper implements Shape
 
     public Bed(double x, double y, double width, double height, double pillowWidth)
     {
-	// calculate positions for different parts of bed
+	drawingHelper(x, y, width, height, pillowWidth);
+
+    }
+    public void drawingHelper(double x, double y, double width, double height, double pillowWidth)
+    {
+	// calculate positions for different parts of bed                                                                                                                                   
         double mattressHeight = .4*height;
         double mattressYPosition = y + .3*height;
-	double pillowHeight = .3*pillowWidth;
+        double pillowHeight = .3*pillowWidth;
         double pillowYPosition = mattressYPosition - pillowHeight;
 
-	//make different parts of bed by scaling different location inputs
+        //make different parts of bed by scaling different location inputs                                                                                                                  
         Rectangle2D.Double mattress = new Rectangle2D.Double(x, mattressYPosition, width, mattressHeight);
         Line2D.Double leftPost =      new Line2D.Double(x, y, x, y + height);
         Line2D.Double rightPost =     new Line2D.Double(x+width, y, x+width,y + height);
         Rectangle2D.Double pillow =   new Rectangle2D.Double(x + .9*width - pillowWidth , pillowYPosition, pillowWidth, pillowHeight);
-	Circle leftLegEnd =           new Circle(x, y+height, .1*width);
-	Circle rightLegEnd =          new Circle(x+width, y+height, .1*width);
+        Circle leftLegEnd =           new Circle(x, y+height, .1*width);
+        Circle rightLegEnd =          new Circle(x+width, y+height, .1*width);
 
-	//group bed parts together in a GeneralPath
+        //group bed parts together in a GeneralPath                                                                                                                                         
         GeneralPath wholeBed = this.get();
         wholeBed.append(mattress, false);
         wholeBed.append(leftPost, false);
         wholeBed.append(rightPost, false);
         wholeBed.append(pillow, false);
-	wholeBed.append(leftLegEnd, false);
-	wholeBed.append(rightLegEnd, false);
+        wholeBed.append(leftLegEnd, false);
+        wholeBed.append(rightLegEnd, false);
+
     }
 }
