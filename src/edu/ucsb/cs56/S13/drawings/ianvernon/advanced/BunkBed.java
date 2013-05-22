@@ -34,26 +34,6 @@ public class BunkBed extends Bed implements Shape
     {
 	// call Bed constructor to create bottom bed
 	super(x, y, width, height, pillowWidth);
-
-	// coordinates and sizes for different parts of bed
-	double mattressHeight = .4*height;
-        double mattressYPosition = y - height + .3*height;
-        double pillowHeight = .3*pillowWidth;
-        double pillowYPosition = mattressYPosition - pillowHeight;
-
-	// make shapes for each bed part
-        Rectangle2D.Double mattress = new Rectangle2D.Double(x, mattressYPosition, width, mattressHeight);
-        Line2D.Double leftPost      = new Line2D.Double(x, y-height, x, y);
-        Line2D.Double rightPost     = new Line2D.Double(x+width, y-height, x+width,y);
-        Rectangle2D.Double pillow   = new Rectangle2D.Double(x + .9*width - pillowWidth , pillowYPosition, pillowWidth, pillowHeight);
-	Line2D.Double ladder        = new Line2D.Double(x-.2*x, y+height, x, .8*y);
-
-	// put all parts of bed into a General Path
-        GeneralPath wholeBed = this.get();
-        wholeBed.append(mattress, false);
-        wholeBed.append(leftPost, false);
-        wholeBed.append(rightPost, false);
-        wholeBed.append(pillow, false);
-	wholeBed.append(ladder, false);
+	drawingHelper(x, y-height, width, height, pillowWidth);
     }
 }
