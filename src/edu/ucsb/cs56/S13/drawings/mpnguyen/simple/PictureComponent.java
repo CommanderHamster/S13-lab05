@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.S13.drawings.pconrad.simple;
+package edu.ucsb.cs56.S13.drawings.mpnguyen.simple;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JPanel;
@@ -96,12 +96,16 @@ public class PictureComponent extends JComponent
        g2.draw(snowManMiddleCircle);
 
        // @@@ ADD CODE HERE TO DRAW THE TOP CIRCLE
-       
+       Circle snowManTopCircle = new Circle(snowManCenterBottomX,
+					snowManCenterBottomY - bottomRadius * 2 - middleRadius * 2 - topRadius,
+					topRadius);
+       g2.draw(snowManTopCircle);
+
        
        // @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
        
        g2.drawString("A house and a snowman, by Phill Conrad", 20,20);
-       g2.drawString("Top of snowman added by YOUR NAME HERE", 20,40);
+       g2.drawString("Top of snowman added by Mark Nguyen", 20,40);
     }
 
         
