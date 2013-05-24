@@ -47,21 +47,21 @@ public class Nail extends GeneralPathWrapper implements Shape
         // so we ADD to y to get a "lower" value on the screen
         
 	Line2D.Double top = new Line2D.Double
-	    (x, y+height, x+width, y+height);
+	    (x, y, x+width, y);
 
         Line2D.Double left = 
-            new Line2D.Double (x + (width/3), y + height,
-                               x + (width/3), y + (height/10));
+            new Line2D.Double (x + (width/3), y,
+                               x + (width/3), y + (9*height/10));
                                
         Line2D.Double right =
-            new Line2D.Double (x + (2*width/3), y + height,
-                               x + (2*width/3), y + (height/10));
+            new Line2D.Double (x + (2*width/3), y,
+                               x + (2*width/3), y + (9*height/10));
 
 	Line2D.Double pointLeft =
-            new Line2D.Double (x + width/3, y + height/10, x + width/2, y);
+            new Line2D.Double (x + width/3, y + 9*height/10, x + width/2, y+height);
 	
-	Line2D.Double pointLeft =
-	    new Line2D.Double (x + 2*width/3, y + height/10, x + 2*width/2, y);
+	Line2D.Double pointRight =
+	    new Line2D.Double (x + 2*width/3, y + 9*height/10, x + width/2, y+height);
 	
         // put the whole nail together
        
