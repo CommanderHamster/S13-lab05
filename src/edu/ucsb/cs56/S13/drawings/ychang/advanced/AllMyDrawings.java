@@ -121,21 +121,23 @@ public class AllMyDrawings
 	for(int i =0;i<20;i++){
 		//choose CD case type
 		CDCase cd;
-		Shape cd2;
-		int w=110,h=100,n;
-		double d;
-		int num = (int)(Math.random()*2);
-		if(num==0)
+		Shape cd2;//Shape variable for CDCase to avoid casting error
+		int width=110,height=100;//initial size of the CD case
+
+		//integer variable that handles random int values
+		int inum = (int)(Math.random()*2);
+		if(inum==0)
 		cd= new CDCase(0,0,110,100);
 		else
 		cd = new CDCaseWithCD(0,0,110,100);
-		//rotated
+		//rotation
+		//double variable that handles random double values
 		double dnum = Math.random()*2*Math.PI;
 		cd2 = (ShapeTransforms.rotatedCopyOf(cd,dnum));
 
-		num = (int)(Math.random()*5);
+		inum = (int)(Math.random()*5);
 		
-		switch(num){
+		switch(inum){
 		case 0://horizontal flip
 			
 			cd2 = (ShapeTransforms.horizontallyFlippedCopyOf(cd2));
@@ -145,46 +147,47 @@ public class AllMyDrawings
 			cd2 =(ShapeTransforms.verticallyFlippedCopyOf(cd2));
 			break;
   		case 2://scaled
-			 n = (int)(Math.random()*2);
-			if(n==0)
-			d = Math.random()*3 +1;
+			 inum = (int)(Math.random()*2);
+			if(inum==0)
+			dnum = Math.random()*3 +1;
 			else
-			d = Math.random()*0.9 +0.1;
-			w*=d;
-			h*=d;
-			cd2 = (ShapeTransforms.scaledCopyOf(cd2,d,d));
+			dnum = Math.random()*0.9 +0.1;
+			width*=dnum;
+			height*=dnum;
+			cd2 = (ShapeTransforms.scaledCopyOf(cd2,dnum,dnum));
 			break;
 		case 3://scaled horizontal flip
-			 n = (int)(Math.random()*2);
-			if(n==0)
-			d = Math.random()*3 +1;
+			 inum = (int)(Math.random()*2);
+			if(inum==0)
+			dnum = Math.random()*3 +1;
 			else
-			d = Math.random()*0.9 +0.1;
-			w*=d;
-			h*=d;
-			cd2 = (ShapeTransforms.scaledCopyOf(cd2,d,d));
+			dnum = Math.random()*0.9 +0.1;
+			width*=dnum;
+			height*=dnum;
+			cd2 = (ShapeTransforms.scaledCopyOf(cd2,dnum,dnum));
 			
 			cd2 = (ShapeTransforms.horizontallyFlippedCopyOf(cd2));
 			break;
 		case 4://scaled vertical flip
-			 n = (int)(Math.random()*2);
-			if(n==0)
-			d = Math.random()*3 +1;
+			 inum = (int)(Math.random()*2);
+			if(inum==0)
+			dnum = Math.random()*3 +1;
 			else
-			d = Math.random()*0.9 +0.1;
-			cd2 = (ShapeTransforms.scaledCopyOf(cd2,d,d));
-			w*=d;
-			h*=d;
+			dnum = Math.random()*0.9 +0.1;
+			cd2 = (ShapeTransforms.scaledCopyOf(cd2,dnum,dnum));
+			width*=dnum;
+			height*=dnum;
 			cd2 = (ShapeTransforms.verticallyFlippedCopyOf(cd2));
 			break;
 		}
 		
-		//translate
-		int x = (int)(Math.random()*(640-(int)w));
-		int y = (int) (Math.random()*(480-(int)h));
+		//translation
+		int x = (int)(Math.random()*(640-(int)width));
+		int y = (int) (Math.random()*(480-(int)height));
 		cd2 = (ShapeTransforms.translatedCopyOf(cd2,x,y));
-		//random color	
+		//random color generation	
 		g2.setColor(new Color((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256))); 
+		//draw
 		g2.draw(cd2);
 	
 	}
