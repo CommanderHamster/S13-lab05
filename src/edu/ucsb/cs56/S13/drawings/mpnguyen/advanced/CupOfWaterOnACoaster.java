@@ -29,49 +29,36 @@ public class CupOfWaterOnACoaster extends CupOfWater
 {
     
     /**
-     * Constructor for objects of class CupOfWater
+     * Constructor for objects of class CupOfWaterOnACoaster
      */
-    public CupOfWater(double x, double y, double width, double height)
+    public CupOfWaterOnACoaster(double x, double y, double width, double height)
     {
-    
+        super(x, y, width, height);
+        
         // Specify the upper left corner, and the 
         // width and height of the original points used to 
-        // plot the *hard-coded* cupOfWater
+        // plot the *hard-coded* cupOfWaterOnACoaster
         
-        final double ORIG_X = 50;
-        final double ORIG_Y = 100;
-        final double ORIG_WIDTH = 150;
-        final double ORIG_CIRC_HEIGHT = 0.275 * ORIG_WIDTH;
-        final double ORIG_HEIGHT = 1 * ORIG_WIDTH;
+        final double ORIG_X = x;
+        final double ORIG_Y = y;
         
-        GeneralPath bottomOfTop = new GeneralPath();
-        bottomOfTop.moveTo(ORIG_X, ORIG_Y);
-        bottomOfTop.curveTo(ORIG_X, ORIG_Y + ORIG_CIRC_HEIGHT, ORIG_X + ORIG_WIDTH, ORIG_Y + ORIG_CIRC_HEIGHT, ORIG_X + ORIG_WIDTH, ORIG_Y);
-        
-        Shape topOfTop = ShapeTransforms.verticallyFlippedCopyOf(bottomOfTop);
-        
-        GeneralPath topOfCup = new GeneralPath ();
-        topOfCup.append(bottomOfTop, false);
-        topOfCup.append(topOfTop, false);
-
-       	Shape bottomOfCup = ShapeTransforms.scaledCopyOf(bottomOfTop, 0.65, 0.65);
-	bottomOfCup = ShapeTransforms.translatedCopyOf(bottomOfCup, ORIG_WIDTH * (1 - 0.65) / 2, ORIG_HEIGHT);
+        GeneralPath straw = new GeneralPath();
 	
-	GeneralPath leftLine = new GeneralPath();
-	leftLine.moveTo(ORIG_X, ORIG_Y);
-	leftLine.lineTo(ORIG_X + ORIG_WIDTH * ( 1 - 0.65 ) * 0.5, ORIG_Y + ORIG_HEIGHT);
+	// Draw left side
+	straw.moveTo(ORIG_X - 12, ORIG_Y - 50);
+	straw.lineTo(ORIG_X+2 , ORIG_Y + 2);
 	
-	GeneralPath rightLine = new GeneralPath();
-	rightLine.moveTo(ORIG_X + ORIG_WIDTH, ORIG_Y);
-	rightLine.lineTo(ORIG_X + ORIG_WIDTH * (1 - (( 1 - 0.65 ) * 0.5 ) ), ORIG_Y + ORIG_HEIGHT);
+	// Draw right Side
+	straw.moveTo(ORIG_X, ORIG_Y - 50);
+	straw.lineTo(ORIG_X + 18, ORIG_Y+22);
 	
-	GeneralPath wholeCup = new GeneralPath();
-	wholeCup.append(topOfCup, false);
-	wholeCup.append(bottomOfCup, false);
-	wholeCup.append(rightLine, false);
-	wholeCup.append(leftLine, false);
+	// Draw top side
+	straw.moveTo(ORIG_X - 12, ORIG_Y - 50);
+	straw.lineTo(ORIG_X, ORIG_Y - 50);
 	
-        this.set(wholeCup);
+	// Add to the cup
+	GeneralPath wholeCoaster = this.get();
+	wholeCoaster.append(straw, false);
     }
 
 }

@@ -38,11 +38,11 @@ public class CupOfWater extends GeneralPathWrapper implements Shape
         // width and height of the original points used to 
         // plot the *hard-coded* cupOfWater
         
-        final double ORIG_X = 50;
-        final double ORIG_Y = 100;
-        final double ORIG_WIDTH = 150;
+        final double ORIG_X = x;
+        final double ORIG_Y = y;
+        final double ORIG_WIDTH = width;
         final double ORIG_CIRC_HEIGHT = 0.275 * ORIG_WIDTH;
-        final double ORIG_HEIGHT = 1 * ORIG_WIDTH;
+        final double ORIG_HEIGHT = height;
         
         GeneralPath bottomOfTop = new GeneralPath();
         bottomOfTop.moveTo(ORIG_X, ORIG_Y);

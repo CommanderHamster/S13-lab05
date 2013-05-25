@@ -30,6 +30,9 @@ public class AllMyDrawings
      */
 
     public static void drawPicture1(Graphics2D g2) {
+    	CupOfWaterOnACoaster cup = new CupOfWaterOnACoaster(50, 100, 100, 100);
+    	g2.setColor(Color.BLUE);
+    	g2.draw(cup);
     }
 
 
@@ -48,7 +51,7 @@ public class AllMyDrawings
 	g2.drawString("A bunch of Water Cups by Mark Nguyen", 20,20);
 
 	
-	// Draw some coffee cups.
+	// Draw some cups
 	
        CupOfWater large = new CupOfWater(100,50,225,150);
        CupOfWater smallCC = new CupOfWater(20,50,40,30);
