@@ -14,7 +14,7 @@ import edu.ucsb.cs56.S13.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.S13.drawings.utilities.GeneralPathWrapper;
 
 /**
-   A CupOfWater (wrapper around a General Path, implements Shape)
+   A CupOfWaterOnACoaster (wrapper around a General Path, implements Shape)
 
    This provides an example of how you can start with the coordinates
    of a hard coded object, and end up with an object that can be
@@ -25,7 +25,7 @@ import edu.ucsb.cs56.S13.drawings.utilities.GeneralPathWrapper;
    @version for CS56, S13, UCSB, 05/15/2013
    
 */
-public class CupOfWater extends GeneralPathWrapper implements Shape
+public class CupOfWaterOnACoaster extends CupOfWater
 {
     
     /**

@@ -45,7 +45,7 @@ public class AllMyDrawings
 	
 	// label the drawing
 	
-	g2.drawString("A bunch of Coffee Cups by Phill Conrad", 20,20);
+	g2.drawString("A bunch of Water Cups by Mark Nguyen", 20,20);
 
 	
 	// Draw some coffee cups.
