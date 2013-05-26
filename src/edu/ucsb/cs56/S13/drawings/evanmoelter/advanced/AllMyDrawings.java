@@ -20,13 +20,14 @@ import edu.ucsb.cs56.S13.drawings.utilities.GeneralPathWrapper;
  * A class with static methods for drawing various pictures
  * 
  * @author Phill Conrad 
- * @version for CS10, lab06, Spring 2009
+ * @author Evan Moelter
+ * @version for CS56, lab05, S13
  */
 
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few screws 
+    /** Draw a picture with a few nails and a couple screws 
      */
 
     public static void drawPicture1(Graphics2D g2) {
@@ -58,8 +59,8 @@ public class AllMyDrawings
 	g2.setColor(new Color(0x002FA7)); 
 	g2.draw(n2); 
 
-	// Draw two nails
-	g2.setStroke(orig);	
+	// Draw two screws
+	g2.setStroke(orig); 
 
 	Screw s1 = new Screw(50, 350, 10, 75);
 	Screw s2 = new Screw(200, 350, 20, 100);
@@ -106,7 +107,7 @@ public class AllMyDrawings
 	g2.setColor(new Color(0x002FA7)); 
 	g2.draw(n2); 
 
-	// Draw two nails
+	// Draw two screws
 	g2.setStroke(orig);	
 
 	Screw s1 = new Screw(50, 350, 10, 75);
@@ -136,8 +137,10 @@ public class AllMyDrawings
        Screw large = new Screw(100,50,30,150);
        Screw small = new Screw(20,50,10,70);
        
-       g2.setColor(Color.RED);     g2.draw(large);
-       g2.setColor(Color.GREEN);   g2.draw(small);
+       g2.setColor(Color.RED);
+       g2.draw(large);
+       g2.setColor(Color.GREEN);   
+       g2.draw(small);
        
        
     }

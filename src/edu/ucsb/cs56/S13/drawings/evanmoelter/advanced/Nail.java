@@ -32,39 +32,33 @@ public class Nail extends GeneralPathWrapper implements Shape
        @param x x coord of lower left corner of nail
        @param y y coord of lower left corner of nail
        @param width width of the nail
-       @param height of nail (including first story and second story)
+       @param height of nail
      */
     public Nail(double x, double y, double width, double height)
     {
-    
-        // Rather than having to scale at the end, we can just
-        // draw things the right way to begin with, using the
-        // x, y, width and height.   If you haven't already
-        // hard coded a particular drawing, this may be an easier
-        // way.
-        
+            
         // Remember that y goes DOWN the page,
         // so we ADD to y to get a "lower" value on the screen
         
 	Line2D.Double top = new Line2D.Double
 	    (x, y, x+width, y);
-
+	
         Line2D.Double left = 
             new Line2D.Double (x + (width/3), y,
                                x + (width/3), y + (9*height/10));
-                               
+	
         Line2D.Double right =
             new Line2D.Double (x + (2*width/3), y,
                                x + (2*width/3), y + (9*height/10));
-
+	
 	Line2D.Double pointLeft =
             new Line2D.Double (x + width/3, y + 9*height/10, x + width/2, y+height);
 	
 	Line2D.Double pointRight =
 	    new Line2D.Double (x + 2*width/3, y + 9*height/10, x + width/2, y+height);
 	
-        // put the whole nail together
-       
+	
+	// put the whole nail together       
         GeneralPath wholeNail = this.get();
         wholeNail.append(top, false);
         wholeNail.append(left, false);

@@ -14,32 +14,33 @@ import java.awt.geom.AffineTransform;
 import edu.ucsb.cs56.S13.drawings.utilities.ShapeTransforms;
 import edu.ucsb.cs56.S13.drawings.utilities.GeneralPathWrapper;
 /**
-   A Nail
+   A nail with threading
       
-   @author Phill Conrad 
-   @version for CS56, W11, UCSB, 02/23/2011
+   @author Evan Moelter
+   @version for CS56, S13, UCSB
    
 */
 public class Screw extends Nail implements Shape
 {
     /**
-     * Constructor for objects of class CoffeeCup
+     * Constructor for objects of class Screw
      */
     public Screw(double x, double y, double width, double height)
     {
-	// construct the basic nail shell
+	// construct the basic nail
 	super(x,y,width,height);
 
 	// get the GeneralPath that we are going to append stuff to
         GeneralPath wholeScrew = this.get();
 
+	//create an array of lines that will look like the threading on a screw.
 	Line2D.Double[] lines = new Line2D.Double[9];
 
+	//create and append each line to the GeneralPath
 	for (int i = 0; i < 9; i++)
 	    {
 		lines[i] = new Line2D.Double (x+(5*width/6), y+ (i*height/10), x + (width/6), y + ((i+1)*height/10));
 		wholeScrew.append(lines[i], false);
 	    }
     }
-
 }
