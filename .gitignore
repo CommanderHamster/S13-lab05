@@ -2,6 +2,8 @@
 javadoc/*
 images/*
 
+*~
+
 # Package Files #
 *.jar
 *.war
